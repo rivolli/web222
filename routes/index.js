@@ -1,5 +1,6 @@
 var express = require('express');
 var router = express.Router();
+const equipes = require('../helpers/equipes')
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
@@ -11,7 +12,10 @@ router.get('/sobre', function(req, res, next) {
 });
 
 router.get('/equipe', function(req, res, next) {
-  res.render('equipe', { title: 'Equipe de desenvolvimento', equipe:true });
+  res.render('equipe', { title: 'Equipe de desenvolvimento',
+                         equipe:true,
+                         equipes: equipes()
+                        });
 });
 
 router.get('/contato', function(req, res, next) {
