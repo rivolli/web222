@@ -11,10 +11,10 @@ router.get('/sobre', function(req, res, next) {
   res.render('sobre', { title: 'Sobre o projeto', sobre:true });
 });
 
-router.get('/equipe', function(req, res, next) {
+router.get('/equipe', async function(req, res, next) {
   res.render('equipe', { title: 'Equipe de desenvolvimento',
                          equipe:true,
-                         equipes: equipes()
+                         equipes: await equipes()
                         });
 });
 
