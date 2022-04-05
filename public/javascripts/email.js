@@ -5,13 +5,16 @@ function enviarForm() {
     var formData = {};
     form.forEach((value, key) => formData[key] = value);
 
-    msgField.innerHTML = ''
+    msgField.innerHTML = '<span class="alert alert-info">Enviando mensagem...</span>'
     axios.post("/api/sendmessage", formData).then(respose => {
         let fields = ['name', 'email', 'subject', 'message']
         fields.forEach(key => {
             document.querySelector("#"+key).value = '';
         })
         msgField.innerHTML = `<span class="alert alert-success">Mensagem enviada com sucesso!</span>`
+        setTimeout(() => {
+            msgField.innerHTML = '';
+        }, 3000)
     }).catch(err => {
         if (err.response) {
             let {msg, field} = err.response.data

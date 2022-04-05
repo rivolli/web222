@@ -39,6 +39,7 @@ router.post("/api/sendmessage", contactValidator, async function(req, res){
                               {name:'Adriano', email:'rivolli@utfpr.edu.br'},
                               `Mensagem do site: ${name}`, content)
   res.json({status: resp})
+  //res.json({status: true})
 })
 
 module.exports = router;
