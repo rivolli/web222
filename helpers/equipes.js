@@ -12,6 +12,5 @@ module.exports = async function() {
         return {content: md.render(content)}
     }));
     
-    console.log(teams)
     return teams
 }

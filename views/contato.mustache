@@ -1,9 +1,105 @@
 {{> header}}
 
-<h1>Fale conosco</h1>
+<!--
+    Section: Contact v.2
+    Extracted from https://mdbootstrap.com/docs/b4/jquery/forms/contact/
+-->
+<section class="mb-4">
 
-<form action="" method="post">
-<label for="nome">Nome:</label> <input id="nome" type="text" name="Nome">
-</form>
+    <!--Section heading-->
+    <h2 class="h1-responsive font-weight-bold text-center my-4">Fale conosco</h2>
+    <!--Section description-->
+    <p class="text-center w-responsive mx-auto mb-5">Possui alguma dúvida? Por favor, fale conosco diretamente por aqui. 
+    Nossa equipe irá entrar em contato com você assim que possível.</p>
+
+    <div class="row">
+
+        <!--Grid column-->
+        <div class="col-md-9 mb-md-0 mb-5">
+            <form id="contact-form" name="contact-form" onsubmit="return enviarForm();" method="POST">
+
+                <!--Grid row-->
+                <div class="row">
+
+                    <!--Grid column-->
+                    <div class="col-md-6">
+                        <div class="md-form mb-0">
+                            <label for="name" class="">Seu nome*</label>
+                            <input type="text" id="name" name="name" class="form-control" required>
+                        </div>
+                    </div>
+                    <!--Grid column-->
+
+                    <!--Grid column-->
+                    <div class="col-md-6">
+                        <div class="md-form mb-0">
+                            <label for="email" class="">Seu email*</label>
+                            <input type="email" id="email" name="email" class="form-control" required>
+                        </div>
+                    </div>
+                    <!--Grid column-->
+
+                </div>
+                <!--Grid row-->
+
+                <!--Grid row-->
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="md-form mb-0">
+                            <label for="subject" class="">Assunto*</label>
+                            <input type="text" id="subject" name="subject" class="form-control" required>
+                        </div>
+                    </div>
+                </div>
+                <!--Grid row-->
+
+                <!--Grid row-->
+                <div class="row">
+
+                    <!--Grid column-->
+                    <div class="col-md-12">
+
+                        <div class="md-form">
+                            <label for="message">Sua mensagem*</label>
+                            <textarea type="text" id="message" name="message" rows="2" class="form-control md-textarea" required></textarea>
+                        </div>
+
+                    </div>
+                </div>
+                <!--Grid row-->
+
+            <div id="vmessage"></div>
+            <div class="text-center text-md-left">
+                <button type="submit" class="btn btn-primary">Enviar</button>
+            </div>
+
+            </form>            
+        </div>
+        <!--Grid column-->
+
+        <!--Grid column-->
+        <div class="col-md-3 text-center">
+            <ul class="list-unstyled mb-0">
+                <li><i class="fas fa-map-marker-alt fa-2x"></i>
+                    <p>Cornélio Procópio, PR, Brasil</p>
+                </li>
+
+                <li><i class="fas fa-phone mt-4 fa-2x"></i>
+                    <p>+55 (43) 3133-3923</p>
+                </li>
+
+                <li><i class="fas fa-envelope mt-4 fa-2x"></i>
+                    <p>rivolli@utfpr.edu.br</p>
+                </li>
+            </ul>
+        </div>
+        <!--Grid column-->
+
+    </div>
+
+</section>
+<!--Section: Contact v.2-->
+
+<script src="javascripts/email.js"></script>
 
 {{> footer}}
