@@ -1,16 +1,11 @@
 const nodemailer = require("nodemailer");
 
-let getTransporter = async function() {
-    
-}
-
 module.exports = {
     send: async function (from, to, subject, msg) {
         if (process.env.EMAIL_USER=='test' && process.env.EMAIL_PASSWORD=='test') {
             let testAccount = await nodemailer.createTestAccount()
             process.env.EMAIL_USER = testAccount.user
-            process.env.EMAIL_PASSWORD = testAccount.pass    
-            console.log("Passando por aqui...")
+            process.env.EMAIL_PASSWORD = testAccount.pass
         }
         
         let transporter = nodemailer.createTransport({

@@ -32,7 +32,6 @@ const ContactSchema = Joi.object({
 module.exports = function(req, res, next) {
     const {error, value} = ContactSchema.validate(req.body);
     if (error) {
-        console.log(error)
         return res.status(500).json({
             status:false,
             msg: error.details[0].message,

@@ -1,5 +1,5 @@
 # web222
-Projeto desenvolvido na disciplina de programação web 2 - Turma 2022-1
+Projeto desenvolvido na disciplina de programação web 2
 
 ## Como rodar a aplicação
 1. Baixe a aplicação localmente

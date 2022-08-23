@@ -32,8 +32,7 @@ router.post("/api/sendmessage", contactValidator, async function(req, res){
 
     <p><b>Assunto da mensagem:</b> ${subject}</p>
 
-    <p><b>Conteúdo da mensagem:</b></p>
-    ${message}`
+    <p><b>Conteúdo da mensagem:</b></p> ${message}`
 
   let resp = await Email.send({name:name, email:email},
                               {name:'Adriano', email:'rivolli@utfpr.edu.br'},
